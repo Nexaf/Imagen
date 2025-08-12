@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imagen tamaño real en vertical</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+    }
+    img {
+      display: block;
+      /* Por defecto, se adapta */
+      max-width: 100vw;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+    /* En modo vertical móvil */
+    @media (orientation: portrait) and (max-width: 768px) {
+      img {
+        max-width: none;   /* Sin límite ancho */
+        max-height: none;  /* Sin límite alto */
+        width: auto;       /* Tamaño real ancho */
+        height: auto;      /* Tamaño real alto */
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/iawBQ43.jpeg" alt="Imagen a tamaño real en vertical" />
+</body>
+</html>
