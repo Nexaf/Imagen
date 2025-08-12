@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Imagen centrada con tamaño máximo en móvil</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+    }
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 90vw;  /* máximo 90% ancho viewport */
+      max-height: 90vh; /* máximo 90% alto viewport */
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.imgur.com/iawBQ43.jpeg" alt="Imagen" />
+</body>
+</html>
